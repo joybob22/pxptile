@@ -273,9 +273,16 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body {
 .rightMidLayerOn, .leftMidLayerOn {
     height: 550px;
     flex-grow: 1;
-    background-color: #464866;
+    background-image: url('images/homeBacksplash.jpg');
+    background-position: center;
+    background-size: cover;
     border-radius: 4px;
     margin-top: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.leftMidLayerOn {
+  box-shadow: -1px 1px 10px black;
 }
 
 .leftMidLayerOff, .rightMidLayerOff {
@@ -330,6 +337,10 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body {
       margin-top: 400px;
   }
 
+  #section2 .leftMidLayerOn {
+    background-image: url('images/shower.jpg');
+  }
+
   #bigHex1 {
       margin-top: 200px;
   }
@@ -367,8 +378,18 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body {
     transform: translate(-50%, -50%);
   }
 
-  .hexagonContent p {
+  .hexagonContent a {
       font-size: 40px;
+      display: block;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+  }
+
+  .hexagonContent a:hover {
+    letter-spacing: 4px;
   }
 
   .contentDivider {
@@ -378,6 +399,10 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body {
 
   #section3 {
       margin-top: 400px;
+  }
+
+  #section3 .rightMidLayerOn {
+    background-image: url('images/fireplace.jpg');
   }
 
   #bigHex3 {

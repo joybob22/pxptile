@@ -1,3 +1,5 @@
+//fancy scrolling functionality
+
 $.fn.moveIt = function(){
     var $window = $(window);
     var instances = [];
@@ -27,3 +29,8 @@ $.fn.moveIt = function(){
   $(function(){
     $('[data-scroll-speed]').moveIt();
   });
+
+  //Get current year
+  var date = new Date();
+  var year = date.getFullYear();
+  $("#year").text(year);
