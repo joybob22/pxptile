@@ -1,3 +1,6 @@
+var phoneRegEx = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+var emailRegEx = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+
 //fancy scrolling functionality
 
 $.fn.moveIt = function(){
@@ -34,3 +37,52 @@ $.fn.moveIt = function(){
   var date = new Date();
   var year = date.getFullYear();
   $("#year").text(year);
+
+  //form validation and http request
+  $("#SubmitButton").on("click", function(){
+    $("#Message").text("Processing...");
+    var data = {
+      firstName: $("#FirstName").val(),
+      lastName: $("#LastName").val(),
+      phoneNumber: $("#PhoneNumber").val(),
+      email: $("#Email").val(),
+      content: $("#Content").val()
+    }
+
+    if(!data.firstName) {
+      $("#Message").text("Please enter your first name");
+    }
+    else if(!data.lastName) {
+      $('#Message').text("Please enter your last name");
+    }
+    else if(!data.phoneNumber) {
+      $("#Message").text("Please enter your phone number");
+    }
+    else if(!phoneRegEx.test(data.phoneNumber)) {
+      $("#Message").text("Please enter a valid phone number");
+    }
+    else if(!data.email) {
+      $("#Message").text("Please enter your email");
+    }
+    else if(!emailRegEx.test(data.email)) {
+      $("#Message").text("Please enter a valid email");
+    }
+    else if(!data.content) {
+      $("#Message").text("Please tell us what you would like to contact us about");
+    } else {
+
+      data.content = "Name: " + data.firstName + " " + data.lastName + "\nPhone Number: " + data.phoneNumber + "\nEmail: " + data.email + "\n\n" + data.content;
+
+      $.post("http://localhost:3000/sendEmail", data, (data, status) => {
+        if(data == "success") {
+          $("#Message").text("Email sent!");
+        } else {
+          $("#Message").text("There was an unknown error. Refresh the page and try again");
+          console.log(data);
+        }
+      })
+    }
+
+    
+
+  })
