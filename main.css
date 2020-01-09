@@ -488,6 +488,10 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
   display: inline-block;
 }
 
+.inputRow {
+  text-align: left;
+}
+
 .inputBorder {
   height: 1px;
   background-color: white;
