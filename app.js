@@ -40,6 +40,16 @@ $.fn.moveIt = function(){
 
   //form validation and http request
   $("#SubmitButton").on("click", function(){
+
+    function inputError(whichInput) {
+      $(`#${whichInput}Border`).css("background-color", "red");
+      $(`#${whichInput}Border`).css("width", "100%");
+      $(`#${whichInput}`).keypress(function() {
+        $(`#${whichInput}Border`).css("background-color", "white");
+        $(`#${whichInput}Border`).css("width", "10%");
+      })
+    }
+
     $("#Message").text("Processing...");
     var data = {
       firstName: $("#FirstName").val(),
@@ -50,36 +60,60 @@ $.fn.moveIt = function(){
     }
 
     if(!data.firstName) {
-      $("#Message").text("Please enter your first name");
+      $("#Message").text("");
+      $("#ErrorMessage").text("Please enter your first name");
+      inputError("FirstName");
     }
     else if(!data.lastName) {
-      $('#Message').text("Please enter your last name");
+      $("#Message").text("");
+      $('#ErrorMessage').text("Please enter your last name");
+      inputError("LastName");
     }
     else if(!data.phoneNumber) {
-      $("#Message").text("Please enter your phone number");
+      $("#Message").text("");
+      $("#ErrorMessage").text("Please enter your phone number");
+      inputError("PhoneNumber");
     }
     else if(!phoneRegEx.test(data.phoneNumber)) {
-      $("#Message").text("Please enter a valid phone number");
+      $("#Message").text("");
+      $("#ErrorMessage").text("Please enter a valid phone number");
+      inputError("PhoneNumber");
     }
     else if(!data.email) {
-      $("#Message").text("Please enter your email");
+      $("#Message").text("");
+      $("#ErrorMessage").text("Please enter your email");
+      inputError("Email");
     }
     else if(!emailRegEx.test(data.email)) {
-      $("#Message").text("Please enter a valid email");
+      $("#Message").text("");
+      $("#ErrorMessage").text("Please enter a valid email");
+      inputError("Email");
     }
     else if(!data.content) {
-      $("#Message").text("Please tell us what you would like to contact us about");
+      $("#Message").text("");
+      $("#ErrorMessage").text("Please tell us what you would like to contact us about");
+      $("#Content").css("border", "1px solid red");
+      $("#Content").keypress(function() {
+        $("#Content").css("border", "1px solid white");
+      })
     } else {
-
+      $("#ErrorMessage").text("");
       data.content = "Name: " + data.firstName + " " + data.lastName + "\nPhone Number: " + data.phoneNumber + "\nEmail: " + data.email + "\n\n" + data.content;
 
-      $.post("http://localhost:3000/sendEmail", data, (data, status) => {
-        if(data == "success") {
-          $("#Message").text("Email sent!");
-        } else {
-          $("#Message").text("There was an unknown error. Refresh the page and try again");
-          console.log(data);
-        }
+      // $.post("http://localhost:3000/sendEmail", data, (data, status) => {
+      //   if(data == "success") {
+      //     $("#Message").text("Email sent! We will contact you soon.");
+      //   } else {
+      //     $("#Message").text("There was an unknown error. Refresh the page and try again");
+      //     console.log(data);
+      //   }
+      // })
+      $.post("http://localhost:3000/sendEmail", data).done(function(msg) {
+        $("#Message").text("");
+        $("#SuccessMessage").text("Email sent! We will contact you soon.");
+      }).fail(function(xhr, status, error) {
+        $("#Message").text("Unknown Error. Refresh the page and try again.");
+        console.log("xhr:", xhr, "\nstatus:", status, "\nerror:", error);
       })
     }
 

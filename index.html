@@ -40,6 +40,7 @@
                             <h1>Check out what we have done</h1>
                             <div class="contentDivider"></div>
                             <a href="">> Backsplash</a>
+                            <div class="hoverLine"></div>
                         </div>
                     </div>
                 </div>
@@ -53,6 +54,7 @@
                             <h1>You will like what you see</h1>
                             <div class="contentDivider"></div>
                             <a href="">> Showers</a>
+                            <div class="hoverLine"></div>
                         </div>
                     </div>
                 </div>
@@ -66,27 +68,62 @@
                             <h1>This could be inside your home</h1>
                             <div class="contentDivider"></div>
                             <a href="">> Fireplaces</a>
+                            <div class="hoverLine"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer">
-            <div class="form">
-                <input id="FirstName" placeholder="First Name">
-                <input id="LastName" placeholder="Last Name">
-                <input id="PhoneNumber" placeholder="Phone Number">
-                <input id="Email" placeholder="Email">
-                <input id="Content" placeholder="What would you like to contact us about?">
-                <div id="SubmitButton">Submit</div>
-                <div id="Message"></div>
+            <div class="footerContainer">
+                <div class="form">
+                    <h1>Like what you see?</h1>
+                    <div class="divider"></div>
+                    <h3>Fill out this simple form and we will get in contact with you.</h3>
+                    <div>
+                        <div class="inputContainer">
+                            <input id="FirstName" placeholder="First Name:">
+                            <div id="FirstNameBorder" class="inputBorder"></div>
+                        </div>
+                        <div class="inputContainer">
+                            <input id="LastName" placeholder="Last Name:">
+                            <div id="LastNameBorder" class="inputBorder"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="inputContainer">
+                            <input id="PhoneNumber" placeholder="Phone Number:">
+                            <div id="PhoneNumberBorder" class="inputBorder"></div>
+                        </div>
+                        <div class="inputContainer">
+                            <input id="Email" placeholder="Email:">
+                            <div id="EmailBorder" class="inputBorder"></div>
+                        </div>
+                    </div>
+                    <textarea id="Content" placeholder="What can we do for you?"></textarea>
+                    <div id="Message"></div>
+                    <div id="SuccessMessage"></div>
+                    <div id="ErrorMessage"></div>
+                    <div id="SubmitButton">Submit</div>
+                </div>
+                <div class="footerNav">
+                    <h3>Gallery</h3>
+                    <div class="divider"></div>
+                    <div class="footerNavItem">
+                        <a href="">Backsplash</a>
+                        <div class="inputBorder"></div>
+                    </div>
+                    <div class="footerNavItem">
+                        <a href="">Showers</a>
+                        <div class="inputBorder"></div>
+                    </div>
+                    <div class="footerNavItem">
+                        <a href="">Fireplaces</a>
+                        <div class="inputBorder"></div>
+                    </div>
+                </div>
             </div>
-            <h4>Gallery</h4>
-            <a href="">Backsplash</a>
-            <a href="">Showers</a>
-            <a href="">Fireplaces</a>
-            <h4>Contact Us</h4>
-            <p>© <span id="year"></span> Piece By Piece Tile All Rights Reserved</p>
+            <p class="copyright">© <span id="year"></span> Piece By Piece Tile All Rights Reserved</p>
         </div>
     </body>
     <script
