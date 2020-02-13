@@ -9,9 +9,9 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 /***************************************/
 
 #homeJumbotron {
-    background-image: url("./images/jumbotron.jpg");
+    background-image: url("./images/jumboMainPic.jpg");
     min-width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -20,21 +20,25 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 
 #jumboOverlay {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     min-width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0,0,0,0.4);
+    min-height: 80vh;
+    /* background-color: rgba(0,0,0,0.4); */
 }
 
 #logo {
-    background-image: url("./images/pxpLogo.png");
+    /* background-image: url("./images/pxpLogo.png");
     height: 200px;
     width: 300px;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     position: absolute;
-    top: -45px;
-    left:-70px;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0.7;
+    /* top: -45px;
+    left:-70px; */
     opacity: 0;
     -webkit-animation: fadeinLogo 2s forwards; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeinLogo 2s forwards; /* Firefox < 16 */
@@ -43,12 +47,20 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
             animation: fadeinLogo 2s forwards;
 }
 
+#logo img {
+  height: 40px;
+  padding: 10px;
+}
+
 #jumboRightContent, #jumboLeftContent {
-    margin: auto;
-    color: rgba(255, 255, 255, 0.8);
+    /* margin: auto; */
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: black;
 }
 
 #jumboLeftContent {
+    display: flex;
+    width: 50%;
     font-size: 25px;
     opacity: 0;
     -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
@@ -57,9 +69,29 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
          -o-animation: fadein 2s forwards; /* Opera < 12.1 */
             animation: fadein 2s forwards;
 }
+#jumboRightContent {
+  width: 50%;
+  display: flex;
+  /* justify-content: flex-end; */
+}
 
-#jumboLeftContent h1 {
+#jumboWords {
+  display: flex;
+  margin-top: 80px;
+  width: 100%;
+}
+
+#jumboWords h1 {
   font-weight: 100;
+  width: 300px;
+  padding: 20px 10px;
+  border: 1px solid black;
+  margin: auto 0 auto 20%;
+}
+
+.rightContainer {
+  width: 350px;
+  margin: auto 0 auto 10%;
 }
 
 .hexagon {
@@ -68,8 +100,8 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
     height: 57.74px;
     background-color: rgba(0,0,0,0);
     margin: 28.87px 0;
-    border-left: solid 1px white;
-    border-right: solid 1px white;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,14 +196,14 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
   
   .hexagon:before {
     top: -35.3553px;
-    border-top: solid 1.4142px white;
-    border-right: solid 1.4142px white;
+    border-top: solid 1.4142px black;
+    border-right: solid 1.4142px black;
   }
   
   .hexagon:after {
     bottom: -35.3553px;
-    border-bottom: solid 1.4142px white;
-    border-left: solid 1.4142px white;
+    border-bottom: solid 1.4142px black;
+    border-left: solid 1.4142px black;
   }
 
   .hexRow {
@@ -262,13 +294,14 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 
 
 #homeContentContainer {
-    background-color: #25274D;
-    padding: 100px 0 50px 0;
+  /* #25274D */
+    background-color: #E3E7EA;
+    padding: 200px 0 50px 0;
 }
 
 .section {
     width: 90%;
-    margin: 200px auto;
+    margin: 0 auto 200px auto;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -295,14 +328,14 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 
 .topLayerRight {
     position:absolute;
-    left: 54%;
-    transform: translateX(-50%);
+    left: 40%;
+    transform: translateX(-54%);
 }
 
 .topLayerLeft {
     position: absolute;
-    right: 54%;
-    transform: translateX(50%);
+    right: 40%;
+    transform: translateX(54%);
 }
 
 .hexagonContent {

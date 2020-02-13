@@ -1,0 +1,227 @@
+/***************************************/
+/* Styles for the backsplash jumbotron */
+/***************************************/
+
+#backsplashJumbo {
+    height: 80vh;
+    width: 100%;
+    background-image: url(images/backsplashMain.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wordsContainer {
+    font-size: 70px;
+    color: white;
+}
+
+#wordsContainer span {
+    text-shadow: 1px 1px black;
+    opacity: 0;
+}
+
+.divider {
+    width: 39%;
+    box-shadow: 1px 1px 5px black;
+    -webkit-animation: fadeinDivider 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeinDivider 1s forwards; /* Firefox < 16 */
+        -ms-animation: fadeinDivider 1s forwards; /* Internet Explorer */
+         -o-animation: fadeinDivider 1s forwards; /* Opera < 12.1 */
+            animation: fadeinDivider 1s forwards;
+}
+
+#letter1 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.05s;
+}
+
+#letter2 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.1s;
+}
+
+#letter3 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.15s;
+}
+
+#letter4 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.2s;
+}
+
+#letter5 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.25s;
+}
+
+#letter6 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.3s;
+}
+
+#letter7 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.35s;
+}
+
+#letter8 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.4s;
+}
+
+#letter9 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.45s;
+}
+
+#letter10 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.5s;
+}
+
+
+@keyframes fadeinDivider {
+    from { width: 0;}
+    to   { width: 39%;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeinDivider {
+    from { width: 0;}
+    to   { width: 39%;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinDivider {
+    from { width: 0;}
+    to   { width: 39%;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeinDivider {
+    from { width: 0;}
+    to   { width: 39%;}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeinDivider {
+    ffrom { width: 0;}
+    to   { width: 39%;}
+}
+
+/***************************************/
+/********* Styles for content **********/
+/***************************************/
+
+#backsplashPicsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.imgContainer {
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    min-width: 400px;
+    height: 400px;
+}
+
+.imageOverlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s
+}
+
+.imageOverlay:hover {
+    opacity: 1;
+}
+
+.imageOverlay div {
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+#img1 {
+    background-image: url(../images/jumboMainPic.jpg);
+}
+
+#img2 {
+    background-image: url(../images/homeBacksplash.jpg);
+}
+
+#img3 {
+    background-image: url(../images/shower.jpg);
+}
+
+#img4 {
+    background-image: url(../images/fireplace.jpg)
+}
+
+#img5 {
+    background-image: url(./images/backsplashMain.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    margin-top: 0;
+}
