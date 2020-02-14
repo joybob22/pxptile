@@ -397,7 +397,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 
   #middleSectionBackground {
     background-color: #00001b;
-    height: 800px;
+    height: 1400px;
     position: absolute;
     width: 100%;
   }
@@ -628,5 +628,17 @@ textarea {
 @media only screen and (max-device-width: 1024px) {
   #homeJumbotron {
     background-attachment: scroll;
+  }
+
+  #homeContentContainer {
+    padding-top: 400px;
+  }
+
+  #section2 {
+    margin-top: 800px;
+  }
+
+  #section3 {
+    margin-top: 800px;
   }
 }
