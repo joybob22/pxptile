@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 /***************************************/
 
 #homeJumbotron {
-    background-image: url("./images/jumboMainPic.jpg");
+    background-image: url("./images/jumboTile.jpg");
     min-width: 100%;
     min-height: 80vh;
     background-attachment: fixed;
@@ -20,10 +20,19 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 
 #jumboOverlay {
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
+    align-items: center;
     min-width: 100%;
     min-height: 80vh;
+    background-color: rgba(0,0,0,1);
+    
+    -webkit-animation: fadeinBackground 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeinBackground 2s forwards; /* Firefox < 16 */
+        -ms-animation: fadeinBackground 2s forwards; /* Internet Explorer */
+         -o-animation: fadeinBackground 2s forwards; /* Opera < 12.1 */
+            animation: fadeinBackground 2s forwards;
     /* background-color: rgba(0,0,0,0.4); */
+    animation-delay: 1s;
 }
 
 #logo {
@@ -32,19 +41,21 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
     width: 300px;
     background-position: center;
     background-size: cover; */
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index:2;
     opacity: 0.7;
     /* top: -45px;
     left:-70px; */
     opacity: 0;
     -webkit-animation: fadeinLogo 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadeinLogo 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadeinLogo 2s forwards; /* Internet Explorer */
-         -o-animation: fadeinLogo 2s forwards; /* Opera < 12.1 */
-            animation: fadeinLogo 2s forwards;
+    -moz-animation: fadeinLogo 2s forwards; /* Firefox < 16 */
+    -ms-animation: fadeinLogo 2s forwards; /* Internet Explorer */
+    -o-animation: fadeinLogo 2s forwards; /* Opera < 12.1 */
+    animation: fadeinLogo 2s forwards;
+    animation-delay: 1s;
 }
 
 #logo img {
@@ -52,46 +63,39 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
   padding: 10px;
 }
 
-#jumboRightContent, #jumboLeftContent {
-    /* margin: auto; */
-    /* color: rgba(255, 255, 255, 0.8); */
-    color: black;
-}
-
-#jumboLeftContent {
-    display: flex;
-    width: 50%;
-    font-size: 25px;
-    opacity: 0;
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-}
-#jumboRightContent {
-  width: 50%;
+#navContainer {
   display: flex;
-  /* justify-content: flex-end; */
+  align-items: center;
+  justify-content: center;
 }
 
-#jumboWords {
-  display: flex;
-  margin-top: 80px;
-  width: 100%;
+.navItem {
+  display:inline-block;
+  padding-left: 20px;
+}
+.navItem a {
+  text-decoration: none;
+  color: black;
 }
 
-#jumboWords h1 {
-  font-weight: 100;
-  width: 300px;
-  padding: 20px 10px;
-  border: 1px solid black;
-  margin: auto 0 auto 20%;
+.navItem .inputBorder {
+  margin: 0;
+  width: 10px;
 }
 
-.rightContainer {
-  width: 350px;
-  margin: auto 0 auto 10%;
+.navItem .inputBorder {
+  background-color: black;
+}
+
+#jumboContent h1 {
+  color: white;
+  font-size: 50px;
+  text-shadow: 1px 1px black;
+  -webkit-animation: fadeinLogo 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinLogo 2s forwards; /* Firefox < 16 */
+    -ms-animation: fadeinLogo 2s forwards; /* Internet Explorer */
+    -o-animation: fadeinLogo 2s forwards; /* Opera < 12.1 */
+    animation: fadeinLogo 2s forwards;
 }
 
 .hexagon {
@@ -106,78 +110,6 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
     align-items: center;
     justify-content: center;
     opacity: 0;
-  }
-
-  #hex1 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-            animation-delay: 1s;
-  }
-
-  #hex2 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-            animation-delay: 1.5s;
-  }
-
-  #hex3 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-            animation-delay: 2s;
-  }
-
-  #hex4 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-            animation-delay: 2.5s;
-  }
-
-  #hex5 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-            animation-delay: 3s;
-  }
-
-  #hex6 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-            animation-delay: 3.5s;
-  }
-
-  #hex7 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-     -ms-animation: fadein 2s forwards; /* Internet Explorer */
-      -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-         animation: fadein 2s forwards;
-         animation-delay: 4s;
-  }
-
-  #hex8 {
-    -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-        -ms-animation: fadein 2s forwards; /* Internet Explorer */
-         -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-            animation: fadein 2s forwards;
-            animation-delay: 4.5s;
   }
   
   .hexagon:before,
@@ -256,6 +188,35 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
     to   { top: 0; opacity: 1;}
 }
 
+@keyframes fadeinBackground {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: rgba(0,0,0,0);}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeinBackground {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: rgba(0,0,0,0);}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinBackground {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: rgba(0,0,0,0);}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeinBackground {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: rgba(0,0,0,0);}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeinBackground {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: rgba(0,0,0,0);}
+}
+
 @keyframes fadeinLogo {
     from { opacity: 0;}
     to   { opacity: 1;}
@@ -293,10 +254,45 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 /***************************************/
 
 
+@keyframes fadeinBackgroundBelow {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: #E3E7EA;}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeinBackgroundBelow {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: #E3E7EA;}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeinBackgroundBelow {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: #E3E7EA;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeinBackgroundBelow {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: #E3E7EA;}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeinBackgroundBelow {
+  from { background-color: rgba(0,0,27,1)}
+  to   { background-color: #E3E7EA;}
+}
+
 #homeContentContainer {
   /* #25274D */
-    background-color: #E3E7EA;
+    background-color: rgba(0,0,27,1);
     padding: 200px 0 50px 0;
+    -webkit-animation: fadeinBackgroundBelow 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinBackgroundBelow 2s forwards; /* Firefox < 16 */
+    -ms-animation: fadeinBackgroundBelow 2s forwards; /* Internet Explorer */
+    -o-animation: fadeinBackgroundBelow 2s forwards; /* Opera < 12.1 */
+    animation: fadeinBackgroundBelow 2s forwards;
+    animation-delay: 1s;
 }
 
 .section {
@@ -397,6 +393,13 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 
   #bigHex2 {
       margin-top: 300px;
+  }
+
+  #middleSectionBackground {
+    background-color: #00001b;
+    height: 800px;
+    position: absolute;
+    width: 100%;
   }
 
   #section2 .hexagonContent {
@@ -609,7 +612,7 @@ textarea {
   width: 20%;
 }
 
-.footerNav a:hover ~ .inputBorder {
+.nav a:hover ~ .inputBorder {
   width: 100%;
 }
 
