@@ -630,7 +630,7 @@ textarea {
     font-size: 30px;
   }
   
-  #homeJumbotron {
+  #homeJumbotron, #backsplashJumbo {
     background-attachment: scroll;
   }
 
