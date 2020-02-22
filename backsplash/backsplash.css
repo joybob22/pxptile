@@ -225,3 +225,17 @@
 .footer {
     margin-top: 0;
 }
+
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width: 1024px) {
+    #backsplashJumbo {
+        background-attachment: scroll;
+      }
+}

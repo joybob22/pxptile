@@ -190,31 +190,31 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 
 @keyframes fadeinBackground {
   from { background-color: rgba(0,0,27,1)}
-  to   { background-color: rgba(0,0,0,0);}
+  to   { background-color: rgba(0,0,0,0.3);}
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadeinBackground {
   from { background-color: rgba(0,0,27,1)}
-  to   { background-color: rgba(0,0,0,0);}
+  to   { background-color: rgba(0,0,0,0.3);}
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadeinBackground {
   from { background-color: rgba(0,0,27,1)}
-  to   { background-color: rgba(0,0,0,0);}
+  to   { background-color: rgba(0,0,0,0.3);}
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadeinBackground {
   from { background-color: rgba(0,0,27,1)}
-  to   { background-color: rgba(0,0,0,0);}
+  to   { background-color: rgba(0,0,0,0.3);}
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadeinBackground {
   from { background-color: rgba(0,0,27,1)}
-  to   { background-color: rgba(0,0,0,0);}
+  to   { background-color: rgba(0,0,0,0.3);}
 }
 
 @keyframes fadeinLogo {
@@ -730,6 +730,19 @@ textarea {
     font-size: 60px;
   }
 
+  .inputBorder {
+    height: 2px;
+  }
+
+  ::placeholder {
+    padding-left: 10px;
+  }
+
+  #ErrorMessage, #SuccessMessage, #Message {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
   .inputContainer, textarea {
     width: 100%;
     margin-bottom: 30px;
@@ -738,7 +751,7 @@ textarea {
   .footerContainer {
     display: inline-block;
     width: 100%;
-    padding: 20px;
+    padding: 80px;
     box-sizing: border-box;
   }
 
@@ -748,10 +761,12 @@ textarea {
 
   .form h1 {
     font-size: 80px;
+    margin-bottom: 40px;
   }
 
   .form h3 {
-    font-size: 40px;
+    margin-top:40px;
+    font-size: 15px;
     margin-bottom: 40px;
   }
 
