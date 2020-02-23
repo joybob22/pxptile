@@ -119,4 +119,9 @@ $.fn.moveIt = function(){
 
     
 
-  })
+  });
+
+
+  $("#hamburger").on('click', () => {
+    $("#mobileNavLinks").slideToggle();
+  });

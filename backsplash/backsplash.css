@@ -238,4 +238,40 @@
     #backsplashJumbo {
         background-attachment: scroll;
       }
+      .navItem a{
+        font-size: 30px;
+      }
+    
+      #navContainer {
+        display: none;
+      }
+    
+      #mobileNav {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      #logo {
+        padding: 10px;
+      }
+    
+      #hamburger i {
+        font-size: 120px;
+        margin-right: 50px;
+      }
+    
+      #mobileNav img{
+        height: 100px;
+        margin-left: 30px;
+      }
+    
+      .mobileNavLink {
+        display: block;
+        font-size: 50px;
+        padding: 40px 0;
+        text-align: center;
+        border-top: 1px solid black;
+        text-decoration: none;
+        color: black;
+      }
 }
