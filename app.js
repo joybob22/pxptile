@@ -14,7 +14,11 @@ $.fn.moveIt = function(){
     window.addEventListener('scroll', function(){
       var scrollTop = $window.scrollTop();
       instances.forEach(function(inst){
-        inst.update(scrollTop);
+        if(inst.el[0].classList.contains('section')) {
+          inst.update(scrollTop);
+        } else {
+          inst.updateWithRotate(scrollTop);
+        }
       });
     }, {passive: true});
   }
@@ -28,6 +32,10 @@ $.fn.moveIt = function(){
     this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
   };
   
+  moveItItem.prototype.updateWithRotate = function(scrollTop){
+    this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px) rotate(45deg)');
+  };
+
   // Initialization
   $(function(){
     $('[data-scroll-speed]').moveIt();
@@ -108,7 +116,7 @@ $.fn.moveIt = function(){
       //     console.log(data);
       //   }
       // })
-      $.post("http://localhost:3000/sendEmail", data).done(function(msg) {
+      $.post("https://pxptileserver.herokuapp.com/sendEmail", data).done(function(msg) {
         $("#Message").text("");
         $("#SuccessMessage").text("Email sent! We will contact you soon.");
       }).fail(function(xhr, status, error) {

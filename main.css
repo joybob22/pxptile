@@ -345,30 +345,19 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 .hexagonContent {
     position: relative;
     width: 500px; 
-    height: 288.68px;
+    height: 500px;
+    box-sizing: border-box;
     background-color: #29648a;
     margin: 144.34px 0;
+    padding: 150px 0;
+    border-radius: 3px;
+  }
+
+  .hexContent {
+    transform: rotate(-45deg);
   }
   
-  .hexagonContent:before,
-  .hexagonContent:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 250px solid transparent;
-    border-right: 250px solid transparent;
-  }
-  
-  .hexagonContent:before {
-    bottom: 100%;
-    border-bottom: 144.34px solid #29648a;
-  }
-  
-  .hexagonContent:after {
-    top: 100%;
-    width: 0;
-    border-top: 144.34px solid #29648a;
-  }
+
 
   .rightTopLayer {
       transform: translateX(-10%);
@@ -388,7 +377,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
   }
 
   #section2 {
-      margin-top: 400px;
+      margin-top: 500px;
   }
 
   #section2 .leftMidLayerOn {
@@ -396,16 +385,16 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
   }
 
   #bigHex1 {
-      margin-top: 200px;
+      margin-top: 140px;
   }
 
   #bigHex2 {
-      margin-top: 300px;
+      margin-top: 230px;
   }
 
   #middleSectionBackground {
     background-color: #00001b;
-    height: 800px;
+    min-height: 100vh;
     position: absolute;
     width: 100%;
   }
@@ -431,14 +420,6 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
       text-align: center;
   }
 
-  .hexContent {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .hexagonContent a {
       font-size: 40px;
       display: block;
@@ -459,7 +440,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
   }
 
   #section3 {
-      margin-top: 400px;
+      margin-top: 500px;
   }
 
   #section3 .rightMidLayerOn {
@@ -467,7 +448,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
   }
 
   #bigHex3 {
-      margin-top: 450px;
+      margin-top: 330px;
   }
 
   #section3 .hexagonContent {
