@@ -3,43 +3,43 @@ var emailRegEx = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
 
 //fancy scrolling functionality
 
-$.fn.moveIt = function(){
-    var $window = $(window);
-    var instances = [];
+// $.fn.moveIt = function(){
+//     var $window = $(window);
+//     var instances = [];
     
-    $(this).each(function(){
-      instances.push(new moveItItem($(this)));
-    });
+//     $(this).each(function(){
+//       instances.push(new moveItItem($(this)));
+//     });
     
-    window.addEventListener('scroll', function(){
-      var scrollTop = $window.scrollTop();
-      instances.forEach(function(inst){
-        if(inst.el[0].classList.contains('section')) {
-          inst.update(scrollTop);
-        } else {
-          inst.updateWithRotate(scrollTop);
-        }
-      });
-    }, {passive: true});
-  }
+//     window.addEventListener('scroll', function(){
+//       var scrollTop = $window.scrollTop();
+//       instances.forEach(function(inst){
+//         if(inst.el[0].classList.contains('section')) {
+//           inst.update(scrollTop);
+//         } else {
+//           inst.updateWithRotate(scrollTop);
+//         }
+//       });
+//     }, {passive: true});
+//   }
   
-  var moveItItem = function(el){
-    this.el = $(el);
-    this.speed = parseInt(this.el.attr('data-scroll-speed'));
-  };
+//   var moveItItem = function(el){
+//     this.el = $(el);
+//     this.speed = parseInt(this.el.attr('data-scroll-speed'));
+//   };
   
-  moveItItem.prototype.update = function(scrollTop){
-    this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
-  };
+//   moveItItem.prototype.update = function(scrollTop){
+//     this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
+//   };
   
-  moveItItem.prototype.updateWithRotate = function(scrollTop){
-    this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px) rotate(45deg)');
-  };
+//   moveItItem.prototype.updateWithRotate = function(scrollTop){
+//     this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px) rotate(45deg)');
+//   };
 
-  // Initialization
-  $(function(){
-    $('[data-scroll-speed]').moveIt();
-  });
+//   // Initialization
+//   $(function(){
+//     $('[data-scroll-speed]').moveIt();
+//   });
 
   //Get current year
   var date = new Date();

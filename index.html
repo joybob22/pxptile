@@ -3,7 +3,8 @@
     <head>
         <title>PxPTile</title>
         <link rel="icon" href="images/pxpLogoPlain.png">
-        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/605311a353.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
@@ -59,47 +60,47 @@
             </div>
         </div>
         <div id="homeContentContainer">
-            <div class="section" data-scroll-speed="10">
-                <div class="rightMidLayerOn"></div>
-                <div class="leftMidLayerOff"></div>
-                <div class="topLayerRight" >
-                    <div id="bigHex1" class="rightTopLayer hexagonContent" data-scroll-speed="9">
-                        <div class="hexContent">
-                            <h1>Check out what we have done</h1>
-                            <div class="contentDivider"></div>
-                            <a href="./backsplash/backsplash.html">> Backsplash</a>
-                            <div class="hoverLine"></div>
+            <div id="content">
+                <div id="firstSection">
+                    <h1>MAKING YOUR HOME YOURS PIECE BY PIECE</h1>
+                    <div id="firstDivider"></div>
+                    <div id="iconBanner">
+                        <div class="iconItem">
+                            <i class="fas fa-ruler"></i>
+                            <h2>We follow YOUR specifications</h2>
+                        </div>
+                        <div class="iconItem">
+                            <i class="fas fa-toolbox"></i>
+                            <h2>Using our advanced toolset and skill</h2>
+                        </div>
+                        <div class="iconItem">
+                            <i class="fas fa-house-user"></i>
+                            <h2>Only the best work is accepted</h2>
                         </div>
                     </div>
+                    <div id="firstSectionPhoto"></div>
                 </div>
-            </div>
-            <div id="middleSectionBackground"></div>
-            <div id="section2" class="section" data-scroll-speed="10">
-                <div class="rightMidLayerOff"></div>
-                <div class="leftMidLayerOn"></div>
-                <div class="topLayerLeft" >
-                    <div id="bigHex2" class="rightTopLayer hexagonContent" data-scroll-speed="9">
-                        <div class="hexContent">
-                            <h1>You will like what you see</h1>
-                            <div class="contentDivider"></div>
-                            <a href="./showers/showers.html">> Showers</a>
-                            <div class="hoverLine"></div>
+                <div id="secondSection">
+                    <a href="backsplash/backsplash.html" class="secondSectionCard card" id="backsplashImg">
+                        <div>
+                            BACKSPLASH
+                            <div class="underline"></div>
                         </div>
-                    </div>
+                    </a>
+                    <a href="showers/showers.html" class="secondSectionCard card" id="showersImg">
+                        <div>
+                            SHOWERS
+                            <div class="underline"></div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div id="section3" class="section" data-scroll-speed="10">
-                <div class="rightMidLayerOn"></div>
-                <div class="leftMidLayerOff"></div>
-                <div class="topLayerRight" >
-                    <div id="bigHex3" class="rightTopLayer hexagonContent" data-scroll-speed="9">
-                        <div class="hexContent">
-                            <h1>This could be inside your home</h1>
-                            <div class="contentDivider"></div>
-                            <a href="./fireplaces/fireplaces.html">> Fireplaces</a>
-                            <div class="hoverLine"></div>
+                <div id="thirdSection">
+                    <a href="fireplaces/fireplaces.html" class="card" id="fireplacesImg">
+                        <div>
+                            FIREPLACES
+                            <div class="underline"></div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -161,7 +162,6 @@
             <p class="copyright">© <span id="year"></span> Piece By Piece Tile All Rights Reserved</p>
         </div>
     </body>
-    <script src="https://use.fontawesome.com/10c8495019.js"></script>
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
