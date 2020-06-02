@@ -124,6 +124,68 @@
             animation-delay: 0.5s;
 }
 
+#letter11 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.55s;
+}
+
+#letter12 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.65s;
+}
+
+#letter13 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.65s;
+}
+
+#letter14 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.7s;
+}
+
+#letter15 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.75s;
+}
+
+#letter16 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.8s;
+}
+
+#letter17 {
+    -webkit-animation: fadein 0.2s forwards; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 0.2s forwards; /* Firefox < 16 */
+        -ms-animation: fadein 0.2s forwards; /* Internet Explorer */
+         -o-animation: fadein 0.2s forwards; /* Opera < 12.1 */
+            animation: fadein 0.2s forwards;
+            animation-delay: 0.85s;
+}
 
 @keyframes fadeinDivider {
     from { width: 0;}
