@@ -336,4 +336,15 @@
         text-decoration: none;
         color: black;
       }
+
+      .imgContainer {
+          display: flex;
+          align-items: flex-end;
+      }
+
+      .imageOverlay {
+          opacity: 1;
+          height: auto;
+          padding: 10px 0;
+      }
 }
