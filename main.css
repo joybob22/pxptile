@@ -659,6 +659,10 @@ textarea {
     font-size: 40px;
   }
 
+  #fireplacesText {
+    font-size: 50px;
+  }
+
   .hexagonContent {
     position: relative;
     width: 800px; 
