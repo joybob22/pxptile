@@ -117,11 +117,17 @@ var emailRegEx = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-
       //   }
       // })
       $.post("https://pxptileserver.herokuapp.com/sendEmail", data).done(function(msg) {
-        $("#Message").text("");
-        $("#SuccessMessage").text("Email sent! We will contact you soon.");
-      }).fail(function(xhr, status, error) {
-        $("#Message").text("Unknown Error. Refresh the page and try again.");
-        console.log("xhr:", xhr, "\nstatus:", status, "\nerror:", error);
+        if(msg == "success") {
+          $("#Message").text("Email sent! We will contact you soon.");
+        } else {
+          $("#Message").text("There was an unknown error. Refresh the page and try again");
+          console.log(msg);
+        }
+        $("#FirstName").val("");
+        $("#LastName").val("");
+        $("#PhoneNumber").val("");
+        $("#Email").val("");
+        $("#Content").val("");
       })
     }
 

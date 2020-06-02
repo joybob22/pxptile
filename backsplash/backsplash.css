@@ -5,7 +5,7 @@
 #backsplashJumbo {
     height: 80vh;
     width: 100%;
-    background-image: url(images/backsplashMain.jpg);
+    background-image: url(images/backsplash10.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -193,7 +193,7 @@
 }
 
 #img1 {
-    background-image: url(../images/jumboMainPic.jpg);
+    background-image: url(images/backsplash11.jpg);
 }
 
 #img2 {
@@ -201,15 +201,15 @@
 }
 
 #img3 {
-    background-image: url(../images/shower.jpg);
+    background-image: url(images/backsplash13.jpg);
 }
 
 #img4 {
-    background-image: url(../images/fireplace.jpg)
+    background-image: url(images/backsplashMain.jpg)
 }
 
 #img5 {
-    background-image: url(./images/backsplashMain.jpg);
+    background-image: url(images/backsplash10.jpg);
 }
 
 
