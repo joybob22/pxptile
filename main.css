@@ -428,7 +428,9 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,html,body,input,textarea {
 }
 
 #showersImg {
-  background-image: url(images/shower.jpg);
+  /* background-image: url(images/shower.jpg);
+   */
+  background-image: url(./showers/images/shower18.PNG);
   background-position: center;
   background-size: cover;
 }

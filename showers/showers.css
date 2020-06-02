@@ -12,7 +12,7 @@
     background-image: url(images/shower13.PNG);
 }
 #img4 {
-    background-image: url(images/shower15.jpg);
+    background-image: url(images/shower25.PNG);
 }
 #img5 {
     background-image: url(images/shower16.jpg);
@@ -44,6 +44,9 @@
 #img14 {
     background-image: url(images/shower24.PNG);
 }
-#img14 {
-    background-image: url(images/shower25.PNG);
+#img15 {
+    background-image: url(../images/shower.jpg);
+}
+#img16 {
+    background-image: url(images/shower15.jpg);
 }
